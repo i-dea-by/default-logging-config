@@ -1,7 +1,11 @@
 [project]
 name = "default-logging-config"
 version = "0.1.0"
-description = "Add your description here"
+description = "Примеры настройки логгирования в Python: использование basicConfig и dictConfig."
+authors = [
+    { name = "Egor Daniloff", email = "i@dea.by" }
+]
+license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
