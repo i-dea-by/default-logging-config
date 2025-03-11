@@ -5,7 +5,6 @@ from pathlib import Path
 LOGS_DIR = Path(__file__).parent / "logs"
 LOG_BACKUP_COUNT = 3  # кол-во бэкапов файла логов
 LOG_MAXSIZE = 10 * 1024 * 1024  # макс. размер файла лога байт
-FUNC_LENGTH = 30  # длина поля с модуль:функция:cтрока
 
 
 class FuncNameFilter(logging.Filter):
@@ -28,11 +27,11 @@ LOGGING_CONFIG = {
     },
     "formatters": {
         "detailed": {
-            "format": f"%(asctime)s.%(msecs)03d | %(levelname)-7s | %(expandedFuncName)-{FUNC_LENGTH}s | %(message)s",
+            "format": "[%(asctime)s.%(msecs)03d] %(levelname)-7s  %(expandedFuncName)-20s - %(message)s",
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
         "console": {
-            "format": "%(asctime)s.%(msecs)03d | %(levelname)-7s | %(module)s:%(lineno)d | %(message)s",
+            "format": "[%(asctime)s.%(msecs)03d] %(levelname)-7s  %(module)s:%(lineno)d - %(message)s",
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
     },
