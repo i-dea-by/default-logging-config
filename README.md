@@ -29,13 +29,15 @@
 - **`logging.config.dictConfig`**: Более гибкий и масштабируемый подход, подходящий для крупных проектов.
 
 
-## Установка
+## Установка и запуск
 
 Для использования примеров, просто клонируйте репозиторий:
 
 ```bash
 git clone https://github.com/i-dea-by/default-logging-config.git
 cd default-logging-config
+python 00_one_file.py
+python 01_import_logger.py
 ```
 
 
