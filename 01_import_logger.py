@@ -1,9 +1,9 @@
 import logging
-import logging.config
+from logging.config import dictConfig
 
 from logger import LOGGING_CONFIG
 
-logging.config.dictConfig(LOGGING_CONFIG)
+dictConfig(LOGGING_CONFIG)
 log = logging.getLogger(__name__)
 
 
