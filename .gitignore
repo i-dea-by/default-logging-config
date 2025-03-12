@@ -10,4 +10,10 @@ wheels/
 .venv
 
 .history/
-logs/*
+
+# Ignore all files within a directory (recursively)
+/logs/**
+# But do not ignore any directory or subdirectory it contains
+!/logs/**/
+# Do not ignore a special file name
+!.gitkeep
