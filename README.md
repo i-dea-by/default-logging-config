@@ -46,6 +46,8 @@ cd default-logging-config
 
 Файл 00_one_file.py содержит простой пример настройки логирования с использованием logging.basicConfig. 
 ```python
+import logging
+
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s.%(msecs)03d | %(levelname)-7s | %(module)s:%(lineno)d - %(message)s",
@@ -60,13 +62,15 @@ log = logging.getLogger(__name__)
 
 Конфигурация логирования вынесена в отдельный модуль logger.py.
 ```python
+import logging
+
 from logger import LOGGING_CONFIG
 
 logging.config.dictConfig(LOGGING_CONFIG)
 log = logging.getLogger(__name__)
 ```
 
-Пример файла логов в терминале:
+Пример логов в терминале:
 ```
 [2025-03-12 01:44:26.385] DEBUG    01_import_logger:24 - Start
 [2025-03-12 01:44:26.385] DEBUG    01_import_logger:17 - It's DEBUG message
@@ -78,7 +82,7 @@ log = logging.getLogger(__name__)
 [2025-03-12 01:44:26.387] DEBUG    01_import_logger:26 - Finish
 ```
 
-Пример файла логов `project.log`, создающегося в каталоге /`logs`:
+Пример логов в файле `project.log`, создающегося в каталоге /`logs`:
 ```
 [2025-03-12 01:42:33.557] DEBUG    01_import_logger:<module>:23 - Start
 [2025-03-12 01:42:33.558] DEBUG    01_import_logger:main:16 - It's DEBUG message
