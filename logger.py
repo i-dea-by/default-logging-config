@@ -27,11 +27,11 @@ LOGGING_CONFIG = {
     },
     "formatters": {
         "detailed": {
-            "format": "[%(asctime)s.%(msecs)03d] %(levelname)-7s  %(expandedFuncName)-20s - %(message)s",
+            "format": "[%(asctime)s.%(msecs)03d] %(levelname)-7s %(expandedFuncName)-20s - %(message)s",
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
         "console": {
-            "format": "[%(asctime)s.%(msecs)03d] %(levelname)-7s  %(module)s:%(lineno)d - %(message)s",
+            "format": "[%(asctime)s.%(msecs)03d] %(levelname)-7s %(module)s:%(lineno)d - %(message)s",
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
     },
